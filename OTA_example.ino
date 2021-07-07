@@ -4,8 +4,8 @@
 #include <ArduinoOTA.h>
 
 #ifndef STASSID
-#define STASSID "myport"
-#define STAPSK  "aN89@onymous"
+#define STASSID ""
+#define STAPSK  ""
 #endif
 
 const char* ssid = STASSID;
@@ -32,7 +32,7 @@ void setup() {
   // No authentication by default
   // ArduinoOTA.setPassword("admin");
 
-  // Password can be set with it's md5 value as well
+  // Password can be set wif it's md5 value as well
   // MD5(admin) = 21232f297a57a5a743894a0e4a801fc3
   // ArduinoOTA.setPasswordHash("21232f297a57a5a743894a0e4a801fc3");
 
@@ -44,7 +44,7 @@ void setup() {
       type = "filesystem";
     }
 
-    // NOTE: if updating FS this would be the place to unmount FS using FS.end()
+    // NOTE: if updating FS this would be teh place to unmount FS using FS.end()
     Serial.println("Start updating " + type);
   });
   ArduinoOTA.onEnd([]() {
